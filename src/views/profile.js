@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import "./general.css";
 
 const Profile = () => {
   const {user } = useAuth0();
@@ -20,9 +21,9 @@ const Profile = () => {
           <p className="lead text-muted">{email}</p>
         </div>
         <div className="row">
-          <pre className="col12 text-light bg-dark p-4">
-            {JSON.stringify(user, null, 2)}
-          </pre>
+        <pre className="col12 text-light bg-dark p-4 json-align-left">
+          {JSON.stringify(user, null, 2)}
+        </pre>
         </div>
       </div>
 

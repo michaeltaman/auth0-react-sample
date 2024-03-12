@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const MainNav = () => {
   const {loginWithRedirect, logout, user, isLoading } = useAuth0();
   return (
-    <div className="navbar-nav mr-auto">
+    <div className="navbar-nav mr-auto d-flex">
       <NavLink
         to="/"
         exact
@@ -30,6 +30,7 @@ const MainNav = () => {
       >
         External API
       </NavLink>
+      <p></p>
       {!isLoading && !user && (
         <button onClick={loginWithRedirect} className="btn btn-primary btn-block">
           Log in

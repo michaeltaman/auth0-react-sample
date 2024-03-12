@@ -7,6 +7,8 @@ import { Home, Profile, ExternalApi } from "./views";
 import "./app.css";
 import Auth0ProviderWithHistory from "./auth0Provider";
 
+import ProtectedRoute from "./components/protected-route";
+
 const App = () => {
   return (
     <Auth0ProviderWithHistory>
@@ -16,7 +18,7 @@ const App = () => {
           <div className="mt-5">
             <Switch>
               <Route path="/" exact component={Home} />
-              <Route path="/profile" component={Profile} />
+              <ProtectedRoute path="/profile" component={Profile} />
               <Route path="/external-api" component={ExternalApi} />
             </Switch>
           </div>

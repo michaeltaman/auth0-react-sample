@@ -9,13 +9,7 @@ const Hero = () => (
     <p className="lead">
       This is a sample application that demonstrates an authentication flow for
       an SPA, using{" "}
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://auth0.com/docs/quickstart/spa/react"
-      >
         React
-      </a>
     </p>
   </div>
 );
